@@ -22,6 +22,7 @@
 		formSearch.submit(function(event) {
 			// ketika form di submit akan jalanin function ini
 			event.preventDefault();
+			alert('masuk');
 			$.get('restaurants.php?q=' + event.target.search.value)
 			.then(function(result) {
 				for (var i = 0; i < result.length; i++)
