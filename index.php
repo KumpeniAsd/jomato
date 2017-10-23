@@ -7,6 +7,7 @@ $query_result = $connection->query("SELECT * FROM restaurants WHERE name LIKE '%
 
 $restaurants = [];
 // looping semua data hasil query
+header( 'Location: /index.html' ) ;
 while ($data = $query_result->fetch_assoc()) {
 	$restaurants[] = $data;
 }
