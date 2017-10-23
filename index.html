@@ -29,21 +29,6 @@
 					$('body').append(`<div>${result[i].name}</div>`);
 			});
 		});
-
-
-		$.get('restaurants.php')
-		.then(function(result) {
-			var table = $('#table-restaurant');
-			for (var i = 0; i < result.length; i++) {
-				var restaurant = result[i];
-				table.append(`
-					<tr>
-						<td>${i + 1}</td>
-						<td>${restaurant.name}</td>
-					</tr>
-				`);
-			}
-		});
 	</script>
 </body>
 </html>
