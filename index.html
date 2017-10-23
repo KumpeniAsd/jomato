@@ -22,7 +22,7 @@
 		formSearch.submit(function(event) {
 			// ketika form di submit akan jalanin function ini
 			event.preventDefault();
-			$.get('/index.php?q=' + event.target.search.value)
+			$.get('https://jomato.herokuapp.com/index.php?q=' + event.target.search.value)
 			.then(function(result) {
 				for (var i = 0; i < result.length; i++)
 					$('body').append(`<div>${result[i].name}</div>`);
@@ -30,7 +30,7 @@
 		});
 
 
-		$.get('/index.php')
+		$.get('https://jomato.herokuapp.com/index.php')
 		.then(function(result) {
 			var table = $('#table-restaurant');
 			for (var i = 0; i < result.length; i++) {
